@@ -16,7 +16,7 @@
         <nav class="navbar navbar-expand-sm navbar-light bg-light">
             <div class="container-fluid">
                 <!-- 画面左上に表示するサイト名のリンクとして適切な表示をするための指定を追加 -->
-                <a href="#" class="navbar-brand"><b>サンプル株式会社</b></a>
+                <a href="#" class="navbar-brand">サンプル株式会社</a>
 
                 <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#nav-bar">
                     <span class="navbar-toggler-icon"></span>
@@ -39,27 +39,27 @@
         <p>ありがとうございました。送信を受け付けました。</p>
         <p>3営業日以内をめどにご返信いたしますので、しばらくお待ちください。</p>
         <table class="mt-4 table">
-            <h3>送信内容</h3>
+        <h3>送信内容</h3>
             <tbody>
                 <tr>
-                    <td>会社名</td>
+                    <th>会社名</th>
                     <td><%= params["company"] %></td>
                 </tr>
                 <tr>
-                    <td>氏名</td>
+                    <th>氏名</th>
                     <td><%= params["name"] %></td>
                 </tr>
                 <tr>
-                    <td>メール</td>
+                    <th>メール</th>
                     <td><%= params["mail"] %></td>
                 </tr>
                 <tr>
-                    <td>電話番号</td>
+                    <th>電話番号</th>
                     <td><%= params["tel"] %></td>
                 </tr>
                 <tr>
                     <% content_new = params["content"] %>
-                    <td>内容</td>
+                    <th>内容</th>
                     <td><%= content_new.gsub(/\r\n|\r|\n/, "<br>") %></td>
                 </tr>
             </tbody>
